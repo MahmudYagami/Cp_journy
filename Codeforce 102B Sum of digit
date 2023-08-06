@@ -1,0 +1,22 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	/* Not optimized(BF)*/
+	 string a;
+	 cin>>a;
+	 int ct=0;
+	 int len=a.length();
+	while(len>1){
+		int sum=0;
+		for(int i=0;i<len;i++){
+			sum+=a[i]-'0';
+		}
+		 a=to_string(sum);
+         len=a.length();
+         ++ct;
+	 }
+	 cout<<ct;
+	return 0;
+}
